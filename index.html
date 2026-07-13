@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Design - Green & White Theme</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manda Strategies · Subnational Diplomacy & Equity Consulting</title>
+    <!-- SEO Meta -->
+    <meta name="description" content="Manda Strategies provides equity-centered subnational diplomacy, urban development, and public policy consulting. We help governments, nonprofits, and global organizations on navigating complex environments." />
+    <meta name="keywords" content="subnational diplomacy, international engagement, urban development, equity policy, Los Angeles consulting, public affairs, government relations, nonprofit development" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.mandastrategies.com/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Manda Strategies · Subnational Diplomacy & Equity Consulting" />
+    <meta property="og:description" content="Strategy. Access. Execution. We advise governments, nonprofits, and global organizations on equity-driven policy, international engagement, and urban development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mandastrategies.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⨁</text></svg>" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         * {
             margin: 0;
@@ -12,373 +26,1127 @@
             box-sizing: border-box;
         }
 
-        /* Green + White + Black palette */
-        :root {
-            --green: #0B6E4F;
-            --green-dark: #065F46;
-            --green-accent: #22A06B;
-            --white: #ffffff;
-            --black: #000000;
-        }
-
         body {
-            background: var(--white);
-            color: var(--black);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
-        header {
-            background: var(--white);
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
+        /* ===== LOGO / BRAND ===== */
+        .logo-mark {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            flex-shrink: 0;
         }
 
         .logo-symbol {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(145deg, var(--green), var(--green-dark));
-            border-radius: 8px;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(145deg, #1b5e2a 0%, #2d8b3d 100%);
+            border-radius: 14px 4px 14px 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-weight: bold;
-            font-size: 1.5rem;
+            box-shadow: 0 10px 15px -6px rgba(27, 94, 42, 0.3);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .logo-symbol img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-symbol span {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            filter: drop-shadow(2px 2px 0 #0d3115);
         }
 
         .logo-text {
-            color: var(--black);
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            line-height: 1.2;
         }
 
         .logo-tagline {
-            color: var(--green-accent);
-            font-size: 0.8rem;
-            margin-left: 0.5rem;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2d8b3d;
+            font-weight: 600;
+            margin-top: -0.2rem;
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            border-bottom: 1px solid rgba(45, 139, 61, 0.1);
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
+            font-weight: 500;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: var(--black);
             text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            transition: color 0.2s;
             border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
+            padding-bottom: 4px;
         }
 
         .nav-links a:hover {
-            color: var(--green);
-            border-bottom-color: var(--green);
+            color: #2d8b3d;
+            border-bottom-color: #2d8b3d;
         }
 
-        /* Buttons */
         .btn-outline {
-            border: 2px solid var(--green);
-            color: var(--green);
+            border: 1.5px solid #2d8b3d;
             background: transparent;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
+            padding: 0.5rem 1.4rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #2d8b3d;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            text-decoration: none;
+            transition: 0.2s;
+            white-space: nowrap;
         }
 
         .btn-outline:hover {
-            background: var(--green);
-            color: var(--white);
+            background: #2d8b3d;
+            color: white;
+            border-color: #2d8b3d;
         }
 
         .btn-primary {
-            background: var(--green);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
+            background: #2d8b3d;
             border: none;
-            border-radius: 5px;
+            padding: 0.7rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            color: white;
+            font-size: 0.95rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
         }
 
         .btn-primary:hover {
-            background: var(--green-dark);
+            background: #1f5a2a;
+            transform: scale(1.02);
         }
 
         .btn-learn {
-            border: 2px solid var(--green-accent);
-            color: var(--green-accent);
             background: transparent;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
+            border: 1.5px solid #2d8b3d;
+            color: #2d8b3d;
+            padding: 0.5rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.85rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
+            margin-top: 0.5rem;
         }
 
         .btn-learn:hover {
-            background: var(--green-accent);
-            color: var(--white);
+            background: #2d8b3d;
+            color: white;
+            transform: translateX(4px);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        /* Sections */
-        section {
-            padding: 4rem 0;
-        }
-
+        /* ===== SECTION TITLE ===== */
         .section-title {
-            color: var(--black);
             font-size: 2rem;
-            margin-bottom: 3rem;
-            text-align: center;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 1.8rem;
         }
 
         .section-title i {
-            color: var(--green);
-            margin-right: 0.5rem;
+            color: #2d8b3d;
+            margin-right: 0.8rem;
         }
 
-        /* Features Grid */
-        .features {
+        /* ===== HERO SECTION with background image ===== */
+        .hero-section {
+            position: relative;
+            padding: 4rem 2rem;
+            margin: 1.5rem 0 2rem;
+            border-radius: 40px;
+            overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1400&h=600&fit=crop&crop=center') center/cover no-repeat;
+            filter: brightness(0.7) saturate(1.1);
+            z-index: 0;
+        }
+
+        .hero-section .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(27, 94, 42, 0.75) 0%, rgba(45, 139, 61, 0.65) 100%);
+            z-index: 1;
+        }
+
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            color: white;
+        }
+
+        .hero-section .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .hero-content h1 span {
+            color: #ffffff;
+            border-bottom: 3px solid #ffffff;
+        }
+
+        .hero-section .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            max-width: 580px;
+            margin-bottom: 1.8rem;
+            line-height: 1.6;
+        }
+
+        .hero-section .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .hero-section .hero-tags span {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(6px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-section .hero-tags span i {
+            margin-right: 0.5rem;
+            color: #ffffff;
+        }
+
+        /* ===== IMAGE PLACEHOLDER for service cards ===== */
+        .img-placeholder {
+            width: 100%;
+            height: 180px;
+            border-radius: 24px 24px 12px 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .img-placeholder img {
+            transform: scale(1.04);
+        }
+
+        /* ===== SERVICE CARDS ===== */
+        .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 28px;
+            padding: 0 0 1.8rem 0;
+            box-shadow: 0 12px 28px -14px rgba(26, 26, 26, 0.10);
+            border: 1px solid #e8e8e8;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px) scale(0.97);
+            animation: cardReveal 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.05s; }
+        .service-card:nth-child(2) { animation-delay: 0.12s; }
+        .service-card:nth-child(3) { animation-delay: 0.19s; }
+        .service-card:nth-child(4) { animation-delay: 0.26s; }
+        .service-card:nth-child(5) { animation-delay: 0.33s; }
+        .service-card:nth-child(6) { animation-delay: 0.40s; }
+        .service-card:nth-child(7) { animation-delay: 0.47s; }
+
+        @keyframes cardReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.97);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 32px 48px -20px rgba(45, 139, 61, 0.25);
+            border-color: #2d8b3d;
+        }
+
+        .service-card .card-body {
+            padding: 0 1.5rem 0.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: #4a4a4a;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.4rem;
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .service-card ul li i {
+            color: #2d8b3d;
+            width: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .service-card .btn-learn {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: #ffffff;
+            border-radius: 48px;
+            padding: 2.5rem 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 12px 28px -14px rgba(26, 26, 26, 0.08);
+            border: 1px solid #e8e8e8;
+        }
+
+        .about-section .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             gap: 2rem;
+            align-items: start;
         }
 
-        .feature-card {
-            padding: 2rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s ease;
+        .about-section .about-text p {
+            font-size: 1rem;
+            color: #333333;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
         }
 
-        .feature-card:hover {
-            box-shadow: 0 5px 20px rgba(11, 110, 79, 0.1);
-            border-color: var(--green);
+        .about-section .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            color: var(--green);
-            margin-bottom: 1rem;
+        .about-section .about-highlights .highlight-item {
+            background: #f0f8f3;
+            padding: 0.9rem 1.4rem;
+            border-radius: 60px;
+            font-weight: 500;
+            color: #1a1a1a;
+            border-left: 5px solid #2d8b3d;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
         }
 
-        .feature-card h3 {
-            color: var(--black);
-            margin-bottom: 0.5rem;
+        .about-section .about-highlights .highlight-item i {
+            color: #2d8b3d;
+            font-size: 1.2rem;
+            width: 1.8rem;
         }
 
-        .feature-card p {
-            color: #666;
+        .about-section .about-email {
+            margin-top: 1.2rem;
+            background: #f0f8f3;
+            padding: 0.7rem 1.6rem;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--green), var(--green-dark));
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
+        .about-section .about-email i {
+            color: #2d8b3d;
         }
 
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .about-section .about-email a {
+            text-decoration: none;
+            color: #1a1a1a;
         }
 
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+        /* ===== CIRCULAR LOGO FRAME ===== */
+        .circle-frame {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #2d8b3d;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
         }
 
-        /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 2rem 0;
-            text-align: center;
+        .circle-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        footer p {
-            margin-bottom: 0.5rem;
+        /* ===== HELLO SECTION ===== */
+        .hello-section {
+            background: #f0f8f3;
+            border-radius: 60px;
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
         }
 
-        /* Responsive */
+        .hello-section .hello-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hello-section .hello-text h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .hello-section .hello-text p {
+            font-size: 1rem;
+            color: #4a4a4a;
+        }
+
+        .hello-section .hello-email {
+            background: white;
+            padding: 0.6rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 500;
+            box-shadow: 0 8px 18px -8px rgba(45, 139, 61, 0.1);
+            border: 1px solid #d0e5d8;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .hello-section .hello-email i {
+            color: #2d8b3d;
+        }
+
+        .hello-section .hello-email a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        /* ===== FEATURED BOX ===== */
+        .featured-box {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 20px 35px -12px rgba(45, 139, 61, 0.08);
+            border-left: 10px solid #2d8b3d;
+            margin: 2.5rem 0;
+        }
+
+        .featured-box .badge {
+            background: #1b5e2a0d;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #1b5e2a;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .featured-grid div {
+            background: #f0f8f3;
+            padding: 0.6rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== ENGAGE ===== */
+        .engage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .engage-item {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #e8e8e8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .engage-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -14px rgba(45, 139, 61, 0.2);
+        }
+
+        .engage-item h4 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+        }
+
+        .engage-item p {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+        }
+
+        .who-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .who-grid span {
+            background: white;
+            padding: 0.4rem 1.4rem;
+            border-radius: 60px;
+            border: 1px solid #d0d0d0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .who-grid span:hover {
+            background: #f0f8f3;
+            border-color: #2d8b3d;
+        }
+
+        /* ===== CTA ===== */
+        .cta-block {
+            background: #1a1a1a;
+            color: white;
+            border-radius: 60px;
+            padding: 2.5rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .cta-block h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .cta-block .btn-primary {
+            background: #ffffff;
+            color: #1a1a1a;
+        }
+
+        .cta-block .btn-primary:hover {
+            background: #e8e8e8;
+        }
+
+        /* ===== FLOATING BUTTON ===== */
+        .floating-contact {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #2d8b3d;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 32px -8px rgba(45, 139, 61, 0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 999;
+            text-decoration: none;
+            font-size: 1.5rem;
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        .floating-contact:hover {
+            transform: scale(1.12);
+            background: #1f5a2a;
+            box-shadow: 0 16px 40px -8px rgba(45, 139, 61, 0.7);
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 12px 32px -8px rgba(45, 139, 61, 0.5); }
+            50% { box-shadow: 0 12px 48px -4px rgba(45, 139, 61, 0.75); }
+        }
+
+        .floating-contact .tooltip {
+            position: absolute;
+            right: 68px;
+            background: #1a1a1a;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(12px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+
+        .floating-contact:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a1a1a;
+            color: #d0d0d0;
+            padding: 2.5rem 0;
+            border-radius: 40px 40px 0 0;
+            margin-top: 2rem;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #d0d0d0, transparent);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 1024px) {
+            .about-section .about-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
+            .container {
+                padding: 0 1rem;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
+            .navbar {
                 flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
             }
 
-            .btn-primary,
-            .btn-outline,
-            .btn-learn {
-                width: 100%;
+            .nav-links {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .btn-outline {
+                align-self: center;
+            }
+
+            .hero-section {
+                padding: 2.5rem 1.5rem;
+                min-height: 300px;
+                border-radius: 28px;
+                margin: 1rem 0 1.5rem;
+            }
+
+            .hero-section .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-section .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-section .hero-tags span {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                max-width: 100%;
+            }
+
+            .service-card .card-body {
+                padding: 0 1.2rem 0.5rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .service-card ul li {
+                font-size: 0.85rem;
+            }
+
+            .img-placeholder {
+                height: 160px;
+            }
+
+            .about-section {
+                padding: 1.8rem 1.2rem;
+                border-radius: 32px;
+            }
+
+            .about-section .about-highlights .highlight-item {
+                font-size: 0.85rem;
+                padding: 0.7rem 1rem;
+            }
+
+            .hello-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.8rem 1.2rem;
+                border-radius: 40px;
+            }
+
+            .hello-section .hello-left {
+                justify-content: center;
+            }
+
+            .circle-frame {
+                width: 80px;
+                height: 80px;
+            }
+
+            .featured-box {
+                padding: 1.5rem 1.2rem;
+                border-radius: 32px;
+            }
+
+            .featured-box h2 {
+                font-size: 1.6rem !important;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-block {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+                border-radius: 40px;
+            }
+
+            .cta-block h2 {
+                font-size: 1.5rem;
+            }
+
+            .engage-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .who-grid {
+                justify-content: center;
+            }
+
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.8rem;
+            }
+
+            .floating-contact {
+                bottom: 1.2rem;
+                right: 1.2rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .floating-contact .tooltip {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-section .hero-tags span {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.8rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-symbol {
+                width: 36px;
+                height: 36px;
+            }
+
+            .logo-symbol span {
+                font-size: 1.4rem;
+            }
+
+            .nav-links {
+                gap: 0.6rem;
+            }
+
+            .nav-links a {
+                font-size: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <div class="logo-symbol">G</div>
-                    <span class="logo-text">Green<span class="logo-tagline">Studio</span></span>
+    <div class="container">
+        <!-- ===== HEADER / NAV ===== -->
+        <div class="navbar">
+            <div class="logo-mark">
+                <div class="logo-symbol">
+                    <img src="images/logo.jpeg" alt="Manda Strategies logo" />
                 </div>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <button class="btn-primary">Get Started</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Welcome to Green Studio</h1>
-            <p>Create beautiful, modern designs with our professional color palette and components</p>
-            <div class="hero-buttons">
-                <button class="btn-primary">Start Free Trial</button>
-                <button class="btn-outline">Learn More</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-star"></i>Our Features</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Beautiful Design</h3>
-                    <p>Create stunning visual experiences with our carefully curated color palette.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized performance for the best user experience across all devices.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure & Reliable</h3>
-                    <p>Enterprise-grade security to keep your projects safe and secure.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Team Collaboration</h3>
-                    <p>Work together seamlessly with our collaborative tools and features.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Analytics</h3>
-                    <p>Track your progress with detailed insights and comprehensive analytics.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Easy Integration</h3>
-                    <p>Integrate with your existing tools and workflows effortlessly.</p>
+                <div>
+                    <div class="logo-text">Manda Strategies</div>
+                    <div class="logo-tagline">subnational · equity · legacy</div>
                 </div>
             </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#">Team</a>
+            </div>
+            <button class="btn-outline"><i class="fa-regular fa-comments"></i> Connect</button>
         </div>
-    </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section" id="about">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of users creating amazing projects with Green Studio</p>
-            <button class="btn-learn">Learn More</button>
-        </div>
-    </section>
+        <!-- ===== HERO SECTION with background image ===== -->
+        <section class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Strategy. <span>Access.</span> Execution.</h1>
+                <p>We advise governments, nonprofits, and global organizations on navigating complex environments, unlocking strategic partnerships, and delivering high-impact initiatives—particular[...]</p>
+                <div class="hero-tags">
+                    <span><i class="fa-regular fa-scale-balanced"></i> Policy Expertise</span>
+                    <span><i class="fa-regular fa-globe"></i> Global Relationships</span>
+                    <span><i class="fa-regular fa-gear"></i> Execution Capability</span>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2024 Green Studio. All rights reserved.</p>
-            <p>Contact: info@greenstudio.com | Phone: +1 (555) 123-4567</p>
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="about-section">
+            <h2 class="section-title"><i class="fa-regular fa-building"></i> About Manda Strategies</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        At Manda Strategies, we are committed to shaping inclusive, resilient, and globally connected communities through innovative consulting and strategic partnerships. We specializ[...]
+                    </p>
+                    <p>
+                        Our team collaborates with governments, nonprofits, and private sector organizations to design and deliver solutions that advance equity, strengthen communities, and drive sust[...]
+                    </p>
+                    <div class="about-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:mandastrategiesllc@gmail.com">mandastrategiesllc@gmail.com</a>
+                    </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fa-regular fa-globe"></i> Bridging Global & Local Partnerships
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-regular fa-train-subway"></i> Advancing Urban & Transportation Initiatives
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-regular fa-people-group"></i> Fostering Inclusive & Resilient Communities
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES SECTION ===== -->
+        <section id="services" class="services-section">
+            <h2 class="section-title"><i class="fa-regular fa-briefcase"></i> Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="img-placeholder">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="Policy Expertise" />
+                    </div>
+                    <div class="card-body">
+                        <h3>Policy & Strategy</h3>
+                        <p>Developing evidence-based policies that advance equity and drive sustainable change.</p>
+                        <ul>
+                            <li><i class="fa-regular fa-check"></i> Policy analysis</li>
+                            <li><i class="fa-regular fa-check"></i> Strategic planning</li>
+                            <li><i class="fa-regular fa-check"></i> Implementation support</li>
+                        </ul>
+                        <a href="#" class="btn-learn"><i class="fa-regular fa-arrow-right"></i> Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="img-placeholder">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="International Engagement" />
+                    </div>
+                    <div class="card-body">
+                        <h3>International Engagement</h3>
+                        <p>Facilitating meaningful partnerships between global and local organizations.</p>
+                        <ul>
+                            <li><i class="fa-regular fa-check"></i> Partnership development</li>
+                            <li><i class="fa-regular fa-check"></i> Network building</li>
+                            <li><i class="fa-regular fa-check"></i> Capacity building</li>
+                        </ul>
+                        <a href="#" class="btn-learn"><i class="fa-regular fa-arrow-right"></i> Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="img-placeholder">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="Urban Development" />
+                    </div>
+                    <div class="card-body">
+                        <h3>Urban Development</h3>
+                        <p>Creating vibrant, equitable, and resilient urban communities.</p>
+                        <ul>
+                            <li><i class="fa-regular fa-check"></i> Urban planning</li>
+                            <li><i class="fa-regular fa-check"></i> Community engagement</li>
+                            <li><i class="fa-regular fa-check"></i> Sustainability</li>
+                        </ul>
+                        <a href="#" class="btn-learn"><i class="fa-regular fa-arrow-right"></i> Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED BOX ===== -->
+        <div class="featured-box">
+            <span class="badge"><i class="fa-regular fa-star"></i> Featured Work</span>
+            <h2>Current Projects & Initiatives</h2>
+            <p>We're actively engaged in transformative projects across the globe.</p>
+            <div class="featured-grid">
+                <div>Urban Equity Framework</div>
+                <div>Global Partnerships Network</div>
+                <div>Policy Innovation Lab</div>
+                <div>Community Resilience Program</div>
+            </div>
         </div>
-    </footer>
+
+        <!-- ===== HELLO SECTION ===== -->
+        <section class="hello-section">
+            <div class="hello-left">
+                <div class="circle-frame">
+                    <img src="images/team-avatar.jpeg" alt="Team member" />
+                </div>
+                <div class="hello-text">
+                    <h2>Let's Connect</h2>
+                    <p>Ready to partner with us on your next initiative?</p>
+                </div>
+            </div>
+            <div class="hello-email">
+                <i class="fa-regular fa-envelope"></i>
+                <a href="mailto:mandastrategiesllc@gmail.com">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- ===== ENGAGE SECTION ===== -->
+        <section class="engage-grid">
+            <div class="engage-item">
+                <h4><i class="fa-regular fa-handshake"></i> Partner With Us</h4>
+                <p>Join our network of organizations committed to equity and sustainable development.</p>
+            </div>
+            <div class="engage-item">
+                <h4><i class="fa-regular fa-lightbulb"></i> Innovation</h4>
+                <p>Explore cutting-edge solutions to complex policy and development challenges.</p>
+            </div>
+            <div class="engage-item">
+                <h4><i class="fa-regular fa-people-group"></i> Community First</h4>
+                <p>Everything we do is rooted in community voices and lived experience.</p>
+            </div>
+        </section>
+
+        <!-- ===== WHO WE WORK WITH ===== -->
+        <section class="engage-grid">
+            <div class="engage-item">
+                <h4>Who We Serve</h4>
+                <div class="who-grid">
+                    <span>Governments</span>
+                    <span>NGOs</span>
+                    <span>Think Tanks</span>
+                    <span>Foundations</span>
+                    <span>International Orgs</span>
+                    <span>Private Sector</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-block">
+            <h2>Ready to drive equity-centered change?</h2>
+            <button class="btn-primary"><i class="fa-regular fa-envelope"></i> Get Started Today</button>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="container">
+                <div>
+                    <strong>Manda Strategies</strong><br>
+                    Subnational Diplomacy & Equity Consulting
+                </div>
+                <div>
+                    <a href="mailto:mandastrategiesllc@gmail.com">mandastrategiesllc@gmail.com</a>
+                </div>
+                <div>
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <p style="font-size: 0.85rem; color: #999;">© 2024 Manda Strategies. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- ===== FLOATING CONTACT BUTTON ===== -->
+        <a href="mailto:mandastrategiesllc@gmail.com" class="floating-contact">
+            <i class="fa-regular fa-envelope"></i>
+            <div class="tooltip">Get in touch</div>
+        </a>
+    </div>
 </body>
 </html>
